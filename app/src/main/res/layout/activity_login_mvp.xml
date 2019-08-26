@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".mvvm.LoginActivityMVVM">
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txt_username_heading"
+                style="@style/TextView.LoginHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/username" />
+
+            <TextView
+                android:id="@+id/txt_username_val"
+                style="@style/TextView.LoginValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_toRightOf="@+id/txt_username_heading" />
+
+            <TextView
+                android:id="@+id/txt_user_age_heading"
+                style="@style/TextView.LoginHeader"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_username_heading"
+                android:layout_margin="15dp"
+                android:text="@string/age" />
+
+            <TextView
+                android:id="@+id/txt_user_age_val"
+                style="@style/TextView.LoginValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_username_val"
+                android:layout_margin="15dp"
+                android:layout_toRightOf="@+id/txt_user_age_heading" />
+
+            <TextView
+                android:id="@+id/txt_user_sir_name"
+                style="@style/TextView.LoginHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_user_age_heading"
+                android:layout_margin="15dp"
+                android:text="@string/sir_name" />
+
+            <TextView
+                android:id="@+id/txt_user_sir_name_val"
+                style="@style/TextView.LoginValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_user_age_val"
+                android:layout_margin="15dp"
+                android:layout_toRightOf="@+id/txt_user_sir_name" />
+
+            <TextView
+                android:id="@+id/txt_user_occu"
+                style="@style/TextView.LoginHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/txt_user_sir_name"
+                android:layout_margin="15dp"
+                android:text="@string/occupation" />
+
+            <TextView
+                android:id="@+id/txt_user_occu_val"
+                style="@style/TextView.LoginValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_user_sir_name_val"
+                android:layout_margin="15dp"
+                android:layout_toRightOf="@+id/txt_user_occu" />
+
+            <TextView
+                android:id="@+id/txt_user_id"
+                style="@style/TextView.LoginHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/txt_user_occu"
+                android:layout_margin="15dp"
+                android:text="@string/id" />
+
+            <TextView
+                android:id="@+id/txt_user_id_val"
+                style="@style/TextView.LoginValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_user_occu_val"
+                android:layout_margin="15dp"
+                android:layout_toRightOf="@+id/txt_user_id" />
+
+            <TextView
+                android:id="@+id/txt_user_city"
+                style="@style/TextView.LoginHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/txt_user_id"
+                android:layout_margin="15dp"
+                android:text="@string/city" />
+
+            <TextView
+                android:id="@+id/txt_user_city_val"
+                style="@style/TextView.LoginValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_user_id_val"
+                android:layout_margin="15dp"
+                android:layout_toRightOf="@+id/txt_user_city" />
+
+            <TextView
+                android:id="@+id/txt_user_country"
+                style="@style/TextView.LoginHeader"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_user_city"
+                android:layout_margin="15dp"
+                android:text="@string/country" />
+
+            <TextView
+                android:id="@+id/txt_user_country_val"
+                style="@style/TextView.LoginValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_user_city_val"
+                android:layout_margin="15dp"
+                android:layout_toRightOf="@+id/txt_user_country" />
+
+            <TextView
+                android:id="@+id/txt_user_salary"
+                style="@style/TextView.LoginHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_user_country"
+                android:layout_margin="15dp"
+                android:text="@string/salary" />
+
+            <TextView
+                android:id="@+id/txt_user_salary_val"
+                style="@style/TextView.LoginValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_user_country_val"
+                android:layout_margin="15dp"
+                android:layout_toRightOf="@+id/txt_user_salary" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
